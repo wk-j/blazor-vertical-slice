@@ -5,7 +5,7 @@ namespace MyWeb.Services;
 
 public class DbService {
     private readonly ILogger<DbService> _logger;
-    private readonly List<Student> _students = new();
+    private static readonly List<Student> _students = new();
 
     public DbService(ILogger<DbService> logger) {
         _logger = logger;
