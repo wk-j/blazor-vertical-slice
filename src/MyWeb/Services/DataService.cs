@@ -12,7 +12,7 @@ public class DbService {
     }
 
     public Result<Student> GetStudent(string email) {
-        var student = _students.FirstOrDefault(s => s.Email == email);
+        var student = _students.LastOrDefault(s => s.Email == email);
         if (student is null) {
             return new Result<Student> {
                 IsSuccess = false,
